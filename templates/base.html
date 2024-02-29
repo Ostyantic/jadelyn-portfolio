@@ -8,19 +8,37 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-    <title>Jadelyn's Portfolio</title>
 
+    <title>Jadelyn Drake</title>
+
+    
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     {% compress css %}
-    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+        <link rel="stylesheet" href="{% static 'src/output.css' %}">
+        <link rel="stylesheet" href="{% static 'stickynav.css' %}"/>
     {% endcompress %}
+
 </head>
 <body class="bg-Nyanza">
 
-        {% block content %}
+    {# header stuff #}
+    {% block header %}
+    {% endblock %}
 
-        {% endblock content %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div>
+            <span>Website created by Brenden Moore & Anthony Lopez 2024</span>
+        </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="{% static 'js/stickynav.js' %}"></script>
 </body>
 </html>

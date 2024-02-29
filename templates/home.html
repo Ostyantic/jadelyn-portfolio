@@ -1,10 +1,19 @@
 {% extends 'base.html' %}
 
+{% block header %}
+    <header id="header">
+        <h1 class="name text-9xl">Jadelyn Drake</h1>
+        <p class="title text-6xl mt-2">Artist</p>
+         <nav class="tabs-container">
+            <a href="{% url 'home' %}" class="">Home</a>
+            <a href="{% url 'portfolio' %}" class="">Portfolio</a>
+            <a href="{% url 'contact' %}" class="tab">Contact</a>
+        </nav>
+    </header>
+{% endblock %}
+
 {% block content %}
 
-    <h1>Home Page</h1>
-    <a href="{% url 'home' %}">Home</a>
-    <a href="{% url 'portfolio' %}">Portfolio</a>
-    <a href="{% url 'contact' %}">Contact</a>
+    <p>Home Page</p>
 
 {% endblock content %}
