@@ -1,0 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.expand-on-hover {
+    display: inline-block;
+    transition: transform 0.3s ease; /* Apply transition to the transform property */
+}
+
+.animate-drop-down-fade-in {
+    animation: drop-down-fade-in 1s ease-out forwards;
+    animation-delay: 0.2s; /* Delay for the drop-down effect */
+}
