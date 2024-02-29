@@ -122,4 +122,5 @@ node_modules/
 poetry.lock
 db.sqlite3
 
-static/
+static/CACHE
+static/src
