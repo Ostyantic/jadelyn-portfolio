@@ -120,3 +120,6 @@ node_modules/
 
 # poetry
 poetry.lock
+db.sqlite3
+
+static/
