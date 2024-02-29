@@ -7,3 +7,7 @@ class HomePageView(TemplateView):
 
 class PortfolioPageView(TemplateView):
     template_name = 'port.html'
+
+
+class ContactPageView(TemplateView):
+    template_name = 'cont.html'
