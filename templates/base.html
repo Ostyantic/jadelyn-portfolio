@@ -8,24 +8,32 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jadelyn's Portfolio</title>
+    <title>Jadelyn Drake</title>
 
     {% compress css %}
-    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+        <link rel="stylesheet" href="{% static 'src/output.css' %}">
+        <link rel="stylesheet" href="{% static 'stickynav.css' %}"/>
     {% endcompress %}
+
 </head>
 <body class="bg-green-50">
 
+    {# header stuff #}
+    {% block header %}
+    {% endblock %}
 
-{#    <div class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">#}
-{#        <svg class="absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>#}
-{#    </div>#}
-
-    <div class="container mx-auto mt-4">
+    <main>
         {% block content %}
-        {% endblock content %}
-    </div>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div>
+            <span>Website created by Brenden Moore & Anthony Lopez 2024</span>
+        </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="{% static 'js/stickynav.js' %}"></script>
 </body>
 </html>
