@@ -8,7 +8,7 @@
 
                 <div class="flex items-center pl-5">
                     <img src="" alt="Profile Image" class="h-16 w-16 rounded-full mr-4 border-4 border-black">
-                    <h1 class="text-white font-bold text-xl animate-drop-down-fade-in">Portfolio</h1>
+                    <h1 class="text-white font-bold text-xl">Portfolio</h1>
                 </div>
 
                 <!-- Navigation Links -->
@@ -24,15 +24,68 @@
 
 {% block content %}
     <main>
-        <div class="container mx-auto">
-            <div class="flex justify-center items-center mt-8">
-                <div class="bg-black bg-opacity-80 p-8 md:p-12 w-full md:w-5/6 lg:w-2/3 rounded-3xl">
-                    <img src="{% static 'images/alone.jpg'%}" alt="Alone with you image" class="w-full rounded-3xl hover:shadow-lg">
-                    <h1 class="text-center text-white text-3xl font-bold pt-3">Alone with You</h1>
+
+    {#Alone with you#}
+    <div class="container mx-auto">
+        <div class="flex justify-center items-center mt-8">
+            <div class="bg-black bg-opacity-80 p-8 md:p-12 w-full md:w-5/6 lg:w-2/3 rounded-3xl">
+                <button data-modal-target="default-modal" data-modal-toggle="default-modal" type="button"><img src="{% static 'images/alone.jpg'%}" alt="Alone with you image" class="w-full rounded-3xl shadow-lg"></button>
+                <h1 class="text-center text-white text-3xl font-bold pt-3">| Alone with You |</h1>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-3xl mt-6 p-6 md:p-8 lg:p-10">
+            <p class="text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor, nisi sit amet sollicitudin
+                finibus, lorem ante volutpat nisi, eget ultricies nulla velit vitae neque. Sed et urna auctor, lobortis
+                lectus sed, posuere justo. Integer congue tortor vel ligula tempus, sit amet efficitur libero vestibulum.
+                Phasellus nec justo vel nulla volutpat aliquet.
+            </p>
+        </div>
+    </div>
+
+    <!-- Alone modal -->
+    <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-full">
+        <div class="relative p-4 w-full max-w-3xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-black rounded-lg shadow">
+                <div class="p-6 md:p-8">
+                    <img src="{% static 'images/alone.jpg'%}" alt="Alone with you image" class="w-full h-auto md:h-full rounded-lg shadow-lg">
                 </div>
             </div>
+        </div>
+    </div>
 
-            <div class="bg-white rounded-3xl mt-6 p-6 md:p-8 lg:p-10">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 pt-10">
+            <!-- Fishy Business -->
+            <div class="bg-black bg-opacity-80 p-8 md:p-12 rounded-3xl">
+                <h1 class="text-center text-white text-3xl font-bold">| Fishy Business |</h1>
+                <button data-modal-target="fish" data-modal-toggle="fish" type="button" class="w-full mt-6">
+                    <img src="{% static 'images/fish.jpg'%}" alt="Fishy Business image" class="w-full rounded-3xl shadow-lg">
+                </button>
+            </div>
+
+            <!-- Project Dark -->
+            <div class="bg-black bg-opacity-80 p-8 md:p-12 rounded-3xl">
+                <h1 class="text-center text-white text-3xl font-bold">| Project Dark |</h1>
+                <button data-modal-target="pdark" data-modal-toggle="pdark" type="button" class="w-full mt-6">
+                    <img src="{% static 'images/pdark.jpg'%}" alt="Project Dark image" class="w-full rounded-3xl shadow-lg">
+                </button>
+            </div>
+
+            <!-- Lorem Ipsum for Fishy Business -->
+            <div class="bg-white rounded-3xl p-6 md:p-8">
+                <p class="text-gray-700">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor, nisi sit amet sollicitudin
+                    finibus, lorem ante volutpat nisi, eget ultricies nulla velit vitae neque. Sed et urna auctor, lobortis
+                    lectus sed, posuere justo. Integer congue tortor vel ligula tempus, sit amet efficitur libero vestibulum.
+                    Phasellus nec justo vel nulla volutpat aliquet.
+                </p>
+            </div>
+
+            <!-- Lorem Ipsum for Project Dark -->
+            <div class="bg-white rounded-3xl p-6 md:p-8">
                 <p class="text-gray-700">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor, nisi sit amet sollicitudin
                     finibus, lorem ante volutpat nisi, eget ultricies nulla velit vitae neque. Sed et urna auctor, lobortis
@@ -41,6 +94,32 @@
                 </p>
             </div>
         </div>
+    </div>
+
+
+    {#Pdark modal#}
+    <div id="pdark" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-full">
+        <div class="relative p-4 w-full max-w-3xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-black rounded-lg shadow">
+                <div class="p-6 md:p-8">
+                    <img src="{% static 'images/pdark.jpg'%}" alt="Alone with you image" class="w-full h-auto md:h-full rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {#Fish modal#}
+    <div id="fish" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-full">
+        <div class="relative p-4 w-full max-w-3xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-black rounded-lg shadow">
+                <div class="p-6 md:p-8">
+                    <img src="{% static 'images/fish.jpg'%}" alt="Alone with you image" class="w-full h-auto md:h-full rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
 
     </main>
 {% endblock content %}
