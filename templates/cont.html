@@ -1,10 +1,23 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block content %}
+{% block header %}
+    <header>
+        <nav class="bg-Blackolive">
+            <div class="mx-auto flex items-center justify-between py-4">
 
-    <h1>Contact Page</h1>
-    <a href="{% url 'home' %}">Home</a>
-    <a href="{% url 'portfolio' %}">Portfolio</a>
-    <a href="{% url 'contact' %}">Contact</a>
+                <div class="flex items-center pl-5">
+                    <img src="" alt="Profile Image" class="h-16 w-16 rounded-full mr-4 border-4 border-black">
+                    <h1 class="text-white font-bold text-xl animate-drop-down-fade-in">Contact</h1>
+                </div>
 
-{% endblock content %}
+                <!-- Navigation Links -->
+                <div class="flex bg-black rounded-l-full over pl-5 pr-12">
+                    <a href="{% url 'home' %}" class="text-gray-300 hover:text-white px-6 py-3">Home</a>
+                    <a href="{% url 'portfolio' %}" class="text-gray-300 hover:text-white px-6 py-3">Portfolio</a>
+                    <a href="{% url 'contact' %}" class="text-gray-300 hover:text-white px-6 py-3">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+{% endblock %}
