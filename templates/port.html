@@ -1,27 +1,46 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block header %}
     <header>
-        <div class="flex items-center">
-            <div class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
-                <svg class="absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+        <nav class="bg-Blackolive">
+            <div class="mx-auto flex items-center justify-between py-4">
+
+                <div class="flex items-center pl-5">
+                    <img src="" alt="Profile Image" class="h-16 w-16 rounded-full mr-4 border-4 border-black">
+                    <h1 class="text-white font-bold text-xl animate-drop-down-fade-in">Portfolio</h1>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="flex bg-black rounded-l-full over pl-5 pr-12">
+                    <a href="{% url 'home' %}" class="text-gray-300 hover:text-white px-6 py-3">Home</a>
+                    <a href="{% url 'portfolio' %}" class="text-gray-300 hover:text-white px-6 py-3">Portfolio</a>
+                    <a href="{% url 'contact' %}" class="text-gray-300 hover:text-white px-6 py-3">Contact</a>
+                </div>
             </div>
-            <h1>Portfolio Page</h1>
-            <div class="bg-black ">
-                <a href="{% url 'home' %}" class="text-blue-400 underline hover:text-blue-500">Home</a>
-                <a href="{% url 'portfolio' %}" class="text-blue-400 underline hover:text-blue-500">Portfolio</a>
-                <a href="{% url 'contact' %}" class="text-blue-400 underline hover:text-blue-500">Contact</a>
-            </div>
-        </div>
+        </nav>
     </header>
 {% endblock %}
 
 {% block content %}
+    <main>
+        <div class="container mx-auto">
+            <div class="flex justify-center items-center mt-8">
+                <div class="bg-black bg-opacity-80 p-8 md:p-12 w-full md:w-5/6 lg:w-2/3 rounded-3xl">
+                    <img src="{% static 'images/alone.jpg'%}" alt="Alone with you image" class="w-full rounded-3xl hover:shadow-lg">
+                    <h1 class="text-center text-white text-3xl font-bold pt-3">Alone with You</h1>
+                </div>
+            </div>
 
-<div class="absolute inset-0 flex justify-center items-center">
-    <div class="bg-black bg-opacity-80 p-36 w-1/2 rounded-3xl">
-        <h1 class="text-center text-6xl font-bold text-white animate-drop-down-fade-in">Jadelyn Drake |</h1>
-    </div>
-</div>
+            <div class="bg-white rounded-3xl mt-6 p-6 md:p-8 lg:p-10">
+                <p class="text-gray-700">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor, nisi sit amet sollicitudin
+                    finibus, lorem ante volutpat nisi, eget ultricies nulla velit vitae neque. Sed et urna auctor, lobortis
+                    lectus sed, posuere justo. Integer congue tortor vel ligula tempus, sit amet efficitur libero vestibulum.
+                    Phasellus nec justo vel nulla volutpat aliquet.
+                </p>
+            </div>
+        </div>
 
-{% endblock %}
+    </main>
+{% endblock content %}
