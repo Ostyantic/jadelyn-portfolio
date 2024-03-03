@@ -2,22 +2,32 @@
 {#{% load static %}#}
 
 {% block header %}
-    <header>
-        <nav class="bg-Blackolive">
-            <div class="mx-auto flex items-center justify-between py-4">
+{#    <header>#}
+{#        <nav class="bg-Blackolive">#}
+{#            <div class="mx-auto flex items-center justify-between py-4">#}
+{##}
+{#                <div class="flex items-center pl-5">#}
+{#                    <img src="" alt="Profile Image" class="h-16 w-16 rounded-full mr-4 border-4 border-black">#}
+{#                    <h1 class="text-white font-bold text-xl">Contact</h1>#}
+{#                </div>#}
+{##}
+{#                <!-- Navigation Links -->#}
+{#                <div class="flex bg-black rounded-l-full over pl-5 pr-12">#}
+{#                    <a href="{% url 'home' %}" class="text-gray-300 hover:text-white px-6 py-3">Home</a>#}
+{#                    <a href="{% url 'portfolio' %}" class="text-gray-300 hover:text-white px-6 py-3">Portfolio</a>#}
+{#                    <a href="{% url 'contact' %}" class="text-gray-300 hover:text-white px-6 py-3">Contact</a>#}
+{#                </div>#}
+{#            </div>#}
+{#        </nav>#}
+{#    </header>#}
 
-                <div class="flex items-center pl-5">
-                    <img src="" alt="Profile Image" class="h-16 w-16 rounded-full mr-4 border-4 border-black">
-                    <h1 class="text-white font-bold text-xl">Contact</h1>
-                </div>
-
-                <!-- Navigation Links -->
-                <div class="flex bg-black rounded-l-full over pl-5 pr-12">
-                    <a href="{% url 'home' %}" class="text-gray-300 hover:text-white px-6 py-3">Home</a>
-                    <a href="{% url 'portfolio' %}" class="text-gray-300 hover:text-white px-6 py-3">Portfolio</a>
-                    <a href="{% url 'contact' %}" class="text-gray-300 hover:text-white px-6 py-3">Contact</a>
-                </div>
-            </div>
+    <header id="header" style="height: 0">
+{#        <h1 class="name text-Dimgray text-9xl">Jadelyn Drake</h1>#}
+{#        <p class="title text-Dimgray text-6xl mt-2">Artist</p>#}
+         <nav class="tabs-container top-0">
+            <a href="{% url 'home' %}" class="">Home</a>
+            <a href="{% url 'portfolio' %}" class="">Portfolio</a>
+            <a href="{% url 'contact' %}" class="">Contact</a>
         </nav>
     </header>
 {% endblock %}
