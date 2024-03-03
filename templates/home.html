@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block header %}
+{% block home_header %}
     <header id="header">
-        <h1 class="name text-Blackolive text-9xl" id="fade-in-text">Jadelyn Drake</h1>
-        <p class="title text-Blackolive text-6xl mt-2" id="fade-in-textp">Artist</p>
+        <h1 class="name text-Dimgray text-9xl" id="fade-in-text">Jadelyn Drake</h1>
+        <p class="title text-Dimgray text-6xl mt-2" id="fade-in-textp">Artist</p>
          <nav class="tabs-container">
             <a href="{% url 'home' %}" class="">Home</a>
             <a href="{% url 'portfolio' %}" class="">Portfolio</a>
@@ -14,7 +15,7 @@
 
 {% block content %}
 
-    <section class="m-20 text-Dimgray">
+    <section class="m-20 text-black">
         <h2 id='about' class="title text-5xl">About Me</h2>
             {#        <h1 id='about' class="title text-center text-4xl py-6">About Me</h1>#}
             {#        <img class="my-auto w-96 rounded-3xl border-white" src="static/images/AnthonyLopez.jpg" alt="AnthonyLopez">#}
@@ -26,18 +27,21 @@
             </div>
     </section>
 
-    <section class="m-20 text-Dimgray">
-        <div class="flex flex-col space-y-8">
-            <div>
-                <h2 class="title text-5xl">School Info</h2>
-                <p class="mt-10">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi bibendum neque egestas congue quisque. Rhoncus dolor purus non enim praesent elementum. Sed viverra ipsum nunc aliquet bibendum enim facilisis. Egestas congue quisque egestas diam. Ultrices dui sapien eget mi proin sed libero enim. Facilisis leo vel fringilla est ullamcorper eget. Sagittis id consectetur purus ut faucibus pulvinar elementum integer enim. Viverra tellus in hac habitasse platea dictumst vestibulum. Sit amet porttitor eget dolor morbi non. Urna condimentum mattis pellentesque id. Tincidunt vitae semper quis lectus nulla at volutpat. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Enim praesent elementum facilisis leo. Consectetur adipiscing elit ut aliquam purus sit amet luctus.
-                </p>
+    <section class="text-black">
+        <div class="flex flex-col space-y-8 ">
+            <div class="text-white bg-black">
+                <div class="p-20">
+                    <h2 class="title text-5xl">School Info</h2>
+                    <p class="mt-10">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi bibendum neque egestas congue quisque. Rhoncus dolor purus non enim praesent elementum. Sed viverra ipsum nunc aliquet bibendum enim facilisis. Egestas congue quisque egestas diam. Ultrices dui sapien eget mi proin sed libero enim. Facilisis leo vel fringilla est ullamcorper eget. Sagittis id consectetur purus ut faucibus pulvinar elementum integer enim. Viverra tellus in hac habitasse platea dictumst vestibulum. Sit amet porttitor eget dolor morbi non. Urna condimentum mattis pellentesque id. Tincidunt vitae semper quis lectus nulla at volutpat. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Enim praesent elementum facilisis leo. Consectetur adipiscing elit ut aliquam purus sit amet luctus.
+                    </p>
+
+                </div>
 
             </div>
-            <div>
+            <div class="m-20">
                 <h2 class="title text-5xl">Mediums</h2>
-                <p class="mt-10">
+                <p class="mt-10 mb-20">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi bibendum neque egestas congue quisque. Rhoncus dolor purus non enim praesent elementum. Sed viverra ipsum nunc aliquet bibendum enim facilisis. Egestas congue quisque egestas diam. Ultrices dui sapien eget mi proin sed libero enim. Facilisis leo vel fringilla est ullamcorper eget. Sagittis id consectetur purus ut faucibus pulvinar elementum integer enim. Viverra tellus in hac habitasse platea dictumst vestibulum. Sit amet porttitor eget dolor morbi non. Urna condimentum mattis pellentesque id. Tincidunt vitae semper quis lectus nulla at volutpat. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Enim praesent elementum facilisis leo. Consectetur adipiscing elit ut aliquam purus sit amet luctus.
                 </p>
             </div>
@@ -45,3 +49,8 @@
     </section>
 
 {% endblock content %}
+
+{% block script %}
+    <script src="{% static 'js/stickynav.js' %}"></script>
+    <script src="{% static 'js/fade-in.js' %}"></script>
+{% endblock %}
