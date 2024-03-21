@@ -1,6 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400&display=swap');
 
 
+/* Styles for small screens (up to 320px) */
+@media only screen and (max-width: 430px) {
+    /* Your CSS rules for small screens here */
+    .name {
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+    }
+
+    .title {
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 200;
+        font-size: 24px;
+    }
+}
+
+
 .name {
     font-family: 'League Spartan', sans-serif;
     font-weight: 400;
