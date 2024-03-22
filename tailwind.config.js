@@ -22,6 +22,10 @@ module.exports = {
                 'Sage': '#BACBA9',
                 'Dimgray': '#717568',
                 'Blackolive': '#3F4739',
+                'Misty_Blue': '#D9E9EC',
+                'Sky_Blue': '#83AEBA',
+                'Steel_Blue': '#62839D',
+                'Midnight_Blue': '#0A102F',
             }
         },
         fontFamily: {
