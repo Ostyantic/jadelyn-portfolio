@@ -11,10 +11,10 @@
 
     <title>Jadelyn Drake</title>
 
-    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     {% compress css %}
         <link rel="stylesheet" href="{% static 'src/output.css' %}">
         <link rel="stylesheet" href="{% static 'stickynav.css' %}"/>
+        <link rel="stylesheet" href="{% static 'styles.css' %}"/>
     {% endcompress %}
 
 </head>
@@ -34,7 +34,7 @@
         {% endblock %}
     </main>
 
-    <footer class="bg-black text-Sage py-4">
+    <footer class="bg-black text-white py-4">
         <div class="flex space-x-4 justify-center">
             <span class="text-lg">Created by Brenden Moore & Anthony Lopez &copy; 2024</span>
             <div class="flex pt-1 space-x-4 sm:justify-center md:mt-0">

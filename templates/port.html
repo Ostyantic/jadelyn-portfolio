@@ -14,40 +14,110 @@
 {% block content %}
     <main>
 
-
-{#    <button data-modal-target="alone" data-modal-toggle="alone" type="button">#}
-{#        <img src="{% static 'images/alone.jpg'%}" alt="Alone with you image" class="w-3/4 h-1/2">#}
-{#    </button>#}
-{#    <button data-modal-target="fish" data-modal-toggle="fish" type="button">#}
-{#        <img src="{% static 'images/fish.jpg'%}" alt="Fishy Business image" class="w-1/2 h-1/2">#}
-{#    </button>#}
-{#    <button data-modal-target="pdark" data-modal-toggle="pdark" type="button">#}
-{#        <img src="{% static 'images/pdark.jpg'%}" alt="Project Dark image" class="w-1/2 h-1/2">#}
-{#    </button>#}
-{#    <button data-modal-target="drake" data-modal-toggle="drake" type="button">#}
-{#        <img src="{% static 'images/drake.jpg'%}" alt="Alone with you image" class="w-1/2 h-1/2">#}
-{#    </button>#}
-{#    <button data-modal-target="stuck" data-modal-toggle="stuck" type="button">#}
-{#        <img src="{% static 'images/stuck.jpg'%}" alt="Alone with you image" class="w-1/2 h-1/2">#}
-{#    </button>#}
-{#    <button data-modal-target="sfish1" data-modal-toggle="sfish1" type="button">#}
-{#        <img src="{% static 'images/swordfishside.jpg'%}" alt="Swordfish Side Image" class="w-1/2 h-1/2">#}
-{#    </button>#}
-{#    <button data-modal-target="sfish2" data-modal-toggle="sfish2" type="button">#}
-{#        <img src="{% static 'images/swordfishtop.jpg'%}" alt="Swordfish Top Image" class="w-1/2 h-1/2">#}
-{#    </button>#}
+{#    <div class="list-wrapper">#}
+{#      <ul class="list">#}
+{#        <li class="item"><div class="content">#}
+            {#Alone with you#}
+{#            <div class="container mx-auto" id="#top">#}
+{#                <div class="flex justify-center items-center">#}
+{#                    <div class="p-8 md:p-12 w-full md:w-5/6 lg:w-2/3 rounded-3xl">#}
+{#                        <button data-modal-target="alone" data-modal-toggle="alone" type="button">#}
+{#                            <img src="{% static 'images/alone.jpg'%}" alt="Alone with you image" class="w-full shadow-lg">#}
+{#                        </button>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div></li>#}
+{#        <li class="item"><div class="content">#}
+            {#Fishy Buisness#}
+{#            <div class="container mx-auto">#}
+{#                <div class="flex justify-center items-center">#}
+{#                    <div class="p-8 md:p-12 w-full md:w-5/6 lg:w-2/3 rounded-3xl">#}
+{#                        <button data-modal-target="fish" data-modal-toggle="fish" type="button" class="w-full mt-6 h-5/6">#}
+{#                            <img src="{% static 'images/fish.jpg'%}" alt="Fishy Business image" class="w-full h-1/2 shadow-lg">#}
+{#                        </button>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div></li>#}
+{#        <li class="item"><div class="content">#}
+            {#Project Dark#}
+{#            <div class="container mx-auto">#}
+{#                <div class="flex justify-center items-center">#}
+{#                    <div class="p-8 md:p-12 w-full md:w-5/6 lg:w-2/3 rounded-3xl">#}
+{#                        <button data-modal-target="pdark" data-modal-toggle="pdark" type="button" class="w-full mt-6 h-5/6">#}
+{#                            <img src="{% static 'images/pdark.jpg'%}" alt="Project Dark image" class="w-full h-1/2 shadow-lg">#}
+{#                        </button>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div></li>#}
+{#        <li class="item"><div class="content">#}
+            {#Red drake#}
+{#            <div class="container mx-auto">#}
+{#                <div class="flex justify-center items-center">#}
+{#                    <div class="p-8 md:p-12 w-full md:w-5/6 lg:w-2/3 rounded-3xl">#}
+{#                        <button data-modal-target="drake" data-modal-toggle="drake" type="button" class="w-full mt-6 h-5/6">#}
+{#                            <img src="{% static 'images/drake.jpg'%}" alt="Alone with you image" class="w-full shadow-lg">#}
+{#                        </button>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div></li>#}
+{#        <li class="item"><div class="content">#}
+            {#Stuck in the corner#}
+{#            <div class="container mx-auto">#}
+{#                <div class="flex justify-center items-center">#}
+{#                    <div class="p-8 md:p-12 w-full md:w-5/6 lg:w-2/3 rounded-3xl">#}
+{#                        <button data-modal-target="stuck" data-modal-toggle="stuck" type="button" class="w-full mt-6 h-5/6">#}
+{#                            <img src="{% static 'images/stuck.jpg'%}" alt="Alone with you image" class="w-full shadow-lg">#}
+{#                        </button>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div></li>#}
+{#      </ul>#}
+{#      <!-- We're calling `handleClick` with a direction argument when the buttons are clicked -->#}
+{#      <button onclick="handleClick('previous')" class="button button--previous" type="button">➜</button>#}
+{#      <button onclick="handleClick('next')" class="button button--next" type="button">➜</button>#}
+{#        <div class="container mx-auto" id="#top">#}
+{#            <div class="flex justify-center items-center">#}
+{#                <div class="p-8 md:p-12 w-full md:w-5/6 lg:w-2/3 rounded-3xl">#}
+{#                    <h1 class="text-black text-xl font-bold pt-2">Alone with You</h1>#}
+{#                    <h2 class="text-black text-md sm:text-md font-bold">2023, 18" x 15" x 9 1/8"</h2>#}
+{#                    <h2 class="text-black text-md sm:text-md font-bold pt-3">(Wood, Air-dry Clay, Photo Prints)</h2>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <script>#}
+{#      const list = document.querySelector(".list");#}
+{##}
+{#      // We want to know the width of one of the items. We'll use this to decide how many pixels we want our carousel to scroll.#}
+{#      const item = document.querySelector(".item");#}
+{#      const itemWidth = item.offsetWidth;#}
+{##}
+{#      function handleClick(direction) {#}
+{#        // Based on the direction we call `scrollBy` with the item width we got earlier#}
+{#        if(direction === "previous") {#}
+{#          list.scrollBy({ left: -itemWidth, behavior: "smooth" });#}
+{#        } else {#}
+{#          list.scrollBy({ left: itemWidth, behavior: "smooth" });#}
+{#        }#}
+{#      }#}
+{#    </script>#}
 
 
     {#Alone with you#}
-    <div class="container mx-auto">
-        <div class="flex justify-center items-center mt-8">
+    <div class="container mx-auto" id="#top">
+        <div class="flex justify-center items-center">
             <div class="p-8 md:p-12 w-full md:w-5/6 lg:w-2/3 rounded-3xl">
                 <button data-modal-target="alone" data-modal-toggle="alone" type="button">
                     <img src="{% static 'images/alone.jpg'%}" alt="Alone with you image" class="w-full shadow-lg">
                 </button>
-                <h1 class="text-black text-xl font-bold pt-3">Alone with You</h1>
-                <h2 class="text-black text-l font-bold">December 13th 2018</h2>
-                <h2 class="text-black text-l font-bold pt-3">20 x 16 inches, soft pastel on paper, 2020</h2>
+                <h1 class="text-black text-xl font-bold pt-2">Alone with You</h1>
+                <h2 class="text-black text-md sm:text-md font-bold">2023, 18" x 15" x 9 1/8"</h2>
+                <h2 class="text-black text-md sm:text-md font-bold pt-3">(Wood, Air-dry Clay, Photo Prints)</h2>
             </div>
         </div>
     </div>
@@ -55,28 +125,29 @@
 
     {#Fishy Buisness#}
     <div class="container mx-auto">
-        <div class="flex justify-center items-center mt-8">
+        <div class="flex justify-center items-center">
             <div class="p-8 md:p-12 w-full md:w-5/6 lg:w-2/3 rounded-3xl">
                 <button data-modal-target="fish" data-modal-toggle="fish" type="button" class="w-full mt-6 h-5/6">
                     <img src="{% static 'images/fish.jpg'%}" alt="Fishy Business image" class="w-full h-1/2 shadow-lg">
                 </button>
                 <h1 class="text-black text-xl font-bold pt-2">Fishy Business</h1>
-                <h2 class="text-black text-l font-bold">December 13th 2018</h2>
-                <h2 class="text-black text-l font-bold pt-3">20 x 16 inches, soft pastel on paper, 2020</h2>
+                <h2 class="text-black text-md sm:text-md font-bold">2024, 12" x 8"</h2>
+                <h2 class="text-black text-md sm:text-md font-bold pt-3">(Intaglio Print on Stonehenge)</h2>
             </div>
         </div>
     </div>
 
+
     {#Project Dark#}
     <div class="container mx-auto">
-        <div class="flex justify-center items-center mt-8">
+        <div class="flex justify-center items-center">
             <div class="p-8 md:p-12 w-full md:w-5/6 lg:w-2/3 rounded-3xl">
                 <button data-modal-target="pdark" data-modal-toggle="pdark" type="button" class="w-full mt-6 h-5/6">
                     <img src="{% static 'images/pdark.jpg'%}" alt="Project Dark image" class="w-full h-1/2 shadow-lg">
                 </button>
                 <h1 class="text-black text-xl font-bold pt-2">Project Dark</h1>
-                <h2 class="text-black text-l font-bold">December 13th 2018</h2>
-                <h2 class="text-black text-l font-bold pt-3">20 x 16 inches, soft pastel on paper, 2020</h2>
+                <h2 class="text-black text-md sm:text-md font-bold">2024, 70” x 40"</h2>
+                <h2 class="text-black text-md sm:text-md font-bold pt-3">(Projection, Alcohol Marker on Paper)</h2>
             </div>
         </div>
     </div>
@@ -84,14 +155,14 @@
 
     {#Red drake#}
     <div class="container mx-auto">
-        <div class="flex justify-center items-center mt-8">
+        <div class="flex justify-center items-center">
             <div class="p-8 md:p-12 w-full md:w-5/6 lg:w-2/3 rounded-3xl">
                 <button data-modal-target="drake" data-modal-toggle="drake" type="button" class="w-full mt-6 h-5/6">
                     <img src="{% static 'images/drake.jpg'%}" alt="Alone with you image" class="w-full shadow-lg">
                 </button>
-                <h1 class="text-black text-xl font-bold pt-2">Bakunawas Escape</h1>
-                <h2 class="text-black text-l font-bold">December 13th 2018</h2>
-                <h2 class="text-black text-l font-bold pt-3">20 x 16 inches, soft pastel on paper, 2020</h2>
+                <h1 class="text-black text-lg sm:text-md font-bold pt-2">Bakunawas Escape</h1>
+                <h2 class="text-black text-md sm:text-md font-bold">2024, ~70" x 20"</h2>
+                <h2 class="text-black text-md sm:text-md font-bold pt-3">(Acrylic on Butcher Paper)</h2>
             </div>
         </div>
     </div>
@@ -99,14 +170,14 @@
 
     {#Stuck in the corner#}
     <div class="container mx-auto">
-        <div class="flex justify-center items-center mt-8">
+        <div class="flex justify-center items-center">
             <div class="p-8 md:p-12 w-full md:w-5/6 lg:w-2/3 rounded-3xl">
                 <button data-modal-target="stuck" data-modal-toggle="stuck" type="button" class="w-full mt-6 h-5/6">
                     <img src="{% static 'images/stuck.jpg'%}" alt="Alone with you image" class="w-full shadow-lg">
                 </button>
                 <h1 class="text-black text-xl font-bold pt-2">Stuck in the corner</h1>
-                <h2 class="text-black text-l font-bold">December 13th 2018</h2>
-                <h2 class="text-black text-l font-bold pt-3">20 x 16 inches, soft pastel on paper, 2020</h2>
+                <h2 class="text-black text-md sm:text-md font-bold">2023 4" x 8.5"</h2>
+                <h2 class="text-black text-md sm:text-md font-bold pt-3">(Found Objects, Airdry Clay, Digital Print)</h2>
             </div>
         </div>
     </div>
@@ -115,7 +186,7 @@
     {#Sword fish#}
     <div class="container mx-auto">
         <div class="container mx-auto">
-            <div class="flex justify-center items-center mt-8">
+            <div class="flex justify-center items-center">
                 <div class="p-8 md:p-12 w-full md:w-5/6 lg:w-2/3 rounded-3xl">
                     <div class="flex justify-between">
                         <button data-modal-target="sfish1" data-modal-toggle="sfish1" type="button" class="w-1/2 mt-6 mr-2">
@@ -126,21 +197,25 @@
                         </button>
                     </div>
                     <h1 class="text-black text-xl font-bold pt-2">Sword Fish</h1>
-                    <h2 class="text-black text-l font-bold">December 13th 2018</h2>
-                    <h2 class="text-black text-l font-bold pt-3">20 x 16 inches, soft pastel on paper, 2020</h2>
+                    <h2 class="text-black text-md sm:text-md font-bold">2023, 20" x 3"</h2>
+                    <h2 class="text-black text-md sm:text-md font-bold pt-3">(Metal and Wood)</h2>
                 </div>
             </div>
         </div>
     </div>
 
-    {# add button to the top back up here #}
+
+    {#Button#}
+    <div class="flex justify-end">
+        <button class="bg-white hover:bg-gray-300 border-2 border-black font-medium rounded-lg text-sm m-4" type="button">
+            <a href="#top">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABVklEQVR4nO2ZLUsEURSGHxWVFQTBIlgs1o0mm8VFLf4M/4Blf4DNbSabYNIimAwGi81iEXT9YpNgEMvCssvAvTDI2XEsM++V88Ap9549c14emAkLTmn2gQMSZgI4BIahjoBJEmMGOM2FiHUOzJIIc8ClESLWFTCPOAvATUGIWLfAIqIsAXclQsS6B5YRYwV4+EOIWF1gFRGaQM9Y8rrkWS/MqJU14MNY7gJoGOfZG+vMOP8E1usKsQF8GUudANOh5+ddxhRwbNx9A62qQ2wDfWOZTvgQUhCE0NMx7vthdmW8GEu0jb5xQSJto+eZCnnPPXgA7I3p+y0I4beDXM8bFbIDvAKPwG5BX5kghBnZrGzmFoKUDSLP0IOI4UbUcCNquBE13IgabkQNN6KGG1HDjajhRtRwI2q4ETXciBpuRA03osa/MdLNhXgiYVrhr7SsNutehhQYAThhHKHaT49hAAAAAElFTkSuQmCC">
+            </a>
+        </button>
+    </div>
 
 
-    {% block comment %}
-
-       ! Modals below !
-
-    {% endblock %}
+    {#! Modals below !#}
 
 
     {#Alone modal#}
