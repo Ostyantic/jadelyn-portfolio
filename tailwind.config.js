@@ -63,6 +63,9 @@ module.exports = {
                 'Segoe UI Symbol',
                 'Noto Color Emoji'
             ]
+        },
+        backgroundImage: {
+            'bg_splash_art': "url('/static/images/landing_splash_art.png')",
         }
     },
     plugins: [
