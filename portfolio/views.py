@@ -1,8 +1,9 @@
 from django.views.generic import TemplateView
-from django.core.mail import EmailMessage
+from django.core.mail import send_mail
 from django.urls import reverse_lazy, reverse
 from django.views.generic import FormView
 from .forms import ContactForm
+from django.template.loader import render_to_string
 
 
 class HomePageView(TemplateView):
@@ -24,14 +25,23 @@ class ContactPageView(FormView):
         email = form.cleaned_data['email']
         message = form.cleaned_data['message']
 
+        html = render_to_string('../templates/contact_form.html',
+                                {
+                                    'name': name,
+                                    'email': email,
+                                    'message': message,
+                                })
+
         # Construct email message
         email_subject = 'Portfolio contact submission'
         email_body = f'Name: {name}\nEmail: {email}\n\nMessage:\n{message}'
         sender_email = email  # Your email here
-        recipient_email = ['brendenm3603@gmail.com']  # List of recipient emails
+        # recipient_email = ['Jadelyn101@hotmail.com', ]  # List of recipient emails
+        recipient_email = ['brendenm3603@gmail.com', ]  # List of recipient emails
 
         # Send email
-        email = EmailMessage(email_subject, email_body, sender_email, recipient_email)
-        email.send()
+        # email = EmailMessage(email_subject, email_body, sender_email, recipient_email)
+        # email.send()
+        send_mail(email_subject, email_body, sender_email, recipient_email, html_message=html)
 
         return super().form_valid(form)
