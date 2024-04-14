@@ -1,14 +1,11 @@
 from django.views.generic import TemplateView
 from django.core.mail import send_mail
 from port_project.settings import EMAIL_HOST_USER
-from django.urls import reverse_lazy, reverse
-from django.views.generic import FormView
 from .forms import ContactForm
-# imported stuff for function
-from django.shortcuts import render, redirect
-from django.template.loader import render_to_string
-from django.urls import reverse
 
+# imported stuff for function
+from django.shortcuts import render
+from django.template.loader import render_to_string
 
 
 class HomePageView(TemplateView):
@@ -38,7 +35,7 @@ def contact_page_view(request):
             email_subject = 'New portfolio contact submission'
             email_body = f'{name} would like to connect with you!'
             sender_email = email  # Your email here
-            recipient_email = [EMAIL_HOST_USER,]  # List of recipient emails
+            recipient_email = [EMAIL_HOST_USER]  # List of recipient emails
 
             # Send email
             send_mail(email_subject, email_body, sender_email, recipient_email, html_message=html)
